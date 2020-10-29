@@ -22,5 +22,7 @@ end
 private 
 
 def post_params
-    params.require(:post).permit(:username, :email, :birthday, :age, :gender, :zipcode, :name)
+    params.require(:post).permit(:number, :good_thoughts, :bad_thoughts, :suicidal_thoughts, :meds_taken, :goals, :notes, :happy_memory)
 end 
+
+

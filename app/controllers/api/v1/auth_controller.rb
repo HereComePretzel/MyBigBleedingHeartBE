@@ -9,7 +9,7 @@ class Api::V1::AuthController < ApplicationController
             token = JWT.encode(payload, 'S3cR3t', 'HS256')
             render json: {id: user.id, username: user.username, token: token}
         else
-            render json: user { error: 'Invalid username or password.'}
+            render json: {error: 'Invalid username or password.'}
         end
     end 
 
@@ -25,3 +25,4 @@ class Api::V1::AuthController < ApplicationController
     end
     
 end 
+end
