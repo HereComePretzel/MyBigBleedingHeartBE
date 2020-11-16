@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_144122) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
+    t.string "date"
     t.integer "number"
     t.text "good_thoughts"
     t.text "bad_thoughts"
